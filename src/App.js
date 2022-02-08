@@ -1,14 +1,12 @@
-import Header from './components/Header'
-import Button from './components/Button'
-import Dropdown from './components/Dropdown'
+import Canvas from './components/Canvas'
+import './styles/bro.scss';
+
 
 
 function App() {
   return (
     <div className="container">
-      <Header title="Hello"/>
-      <Dropdown />
-      <Button />
+      <Canvas props="Hello"/>
     </div>
   );
 }
