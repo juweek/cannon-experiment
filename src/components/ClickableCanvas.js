@@ -11,21 +11,20 @@ Not needed right now, but will be
   };
 */
 
+/*
+============
+Write out the component itself. 
+1. Take the props in. the props will be the draw function, whatever you decide to make it
+2. call the useCanvas hook. this hook will be the thing that redraws the page every x seconds
+3. return the canvas component, with the useCanvas hook calculating the ref (basically, parameter)
+============
+*/ 
   
-
 const Clickable = props => {
 
-    const { ...rest } = props
+    const { draw, ...rest } = props
 
-    /*
-    ============
-    Write out the component itself. 
-    1. Take the props in. the props will be the draw function, whatever you decide to make it
-    2. call the useCanvas hook. this hook will be the thing that redraws the page every x seconds
-    3. return the canvas component, with the useCanvas hook calculating the ref (basically, parameter)
-    ============
-    */ 
-    const [ coordinates, setCoordinates, canvasRef, canvasWidth, canvasHeight ] = useClickableCanvas();
+    const [ coordinates, setCoordinates, canvasRef, canvasWidth, canvasHeight ] = useClickableCanvas(draw);
 
     const handleCanvasClick=(event)=>{
     // on each click get current mouse location 
