@@ -40,7 +40,7 @@ DRAW LINE: create a draw function
 const drawLine = (ctx, n, x1, y1, x2, y2) => {    
     ctx.beginPath();    
     ctx.lineWidth = n > 0 ? n : 1;    
-    ctx.strokeStyle = "rgb(0, 128, 32)";    
+    ctx.strokeStyle = "#333";    
     ctx.moveTo(x1, y1);    
     ctx.lineTo(x2, y2);    
     ctx.stroke();

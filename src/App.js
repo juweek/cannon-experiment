@@ -1,4 +1,5 @@
 import Canvas from './components/Canvas'
+import Clickable from './components/ClickableCanvas'
 import Forest from './components/Forest'
 import './styles/bro.scss';
 
@@ -49,6 +50,7 @@ RETURN THE APP
     <div className="container">
       <Canvas draw={drawCircle}/>
       <Canvas draw={drawSquare}/>
+      <Clickable />
       <Forest />
     </div>
   );
